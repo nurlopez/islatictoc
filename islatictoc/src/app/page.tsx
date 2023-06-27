@@ -1,7 +1,36 @@
+'use client'
+
 import Head from 'next/head';
 import Image from 'next/image';
 
+import axios from 'axios';
+import { useState, useEffect } from 'react';
+
 export default function Home() {
+  /// States
+
+  const [articles, setArticles] = useState([]);
+
+  /// Effects
+
+  useEffect(() => {
+    getArtices();
+  }, []);
+
+  /// Actions
+
+  const getArtices = async () => {
+    try {
+      const res = await axios.get('http://localhost:4000/');
+      setArticles(res.data);
+    } catch (error) {
+      console.log('There was an error fetching RSS feedURL', error);
+    }
+  };
+
+  /// Render
+
+  console.log(articles);
   return (
     <>
       <Head>

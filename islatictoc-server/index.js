@@ -2,7 +2,7 @@ import cors from 'cors';
 import express from 'express';
 import RSSParser from 'rss-parser';
 
-// States
+
 let articles = [];
 
 const feedURL = 'https://www.spectrumnews.org/feed';

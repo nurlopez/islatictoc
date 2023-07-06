@@ -1,26 +1,36 @@
 @tailwind base;
 @tailwind components;
+
+.card {
+  @apply bg-slate-700 border text-sm max-w-sm overflow-hidden rounded-lg shadow-md shadow-slate-950 duration-300 hover:scale-105 hover:shadow-xl p-4 mx-4;
+}
+
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-rgb: 24, 25, 26;
+  --background-start-rgb: 24, 25, 26;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 25, 156, 255;
+    --background-start-rgb: 24, 25, 26;
     --background-end-rgb: 0, 0, 0;
   }
 }
 
 body {
   margin: 0;
-  font-family: serif;
-  letter-spacing: 0.5px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #fffefb;
+  height: 100vh;
+  background-color: #334155;
 }
+
+/* colours
+#b3c7f7 - light purple
+#ffd61e - yellow
+#a5db32 - lime green
+#18191A - background - dark grey */
